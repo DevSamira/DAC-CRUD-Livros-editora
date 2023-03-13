@@ -1,0 +1,30 @@
+1.    Qual a diferença entre image e container?
+
+         A Image é tipo um template onde possui camadas de arquivos pré configurados e que tem somente a permissão de leitura. Já o container é uma instância de uma
+         image onde ele tem permissão para executar o que está definido na image. Dessa forma, pode-se concluir que o container é executável enquanto image não. Além
+         disso, uma image é utilizada por um container do qual é criado somente após a criação da image. 
+
+2.    Qual a diferença entre os comandos COPY, EXPOSE e ADD?
+
+          O comando "EXPOSE" é utilizado durante a criação de um contêiner para informar qual porta deve ser liberada para o contêiner. Embora ele apresente portas em
+          suas execuções, ele não as libera, apenas as expõe. Caso haja a necessidade de liberar uma porta, deverá ser utilizado outro comando.Já "COPY" e "ADD" são 
+          utilizados no momento em que há necessidade de copiar um arquivo remoto ou local para uma pasta na imagem no docker. A principal diferença está na localização
+          dos arquivos a serem copiados, pois ADD realiza a cópia de arquivos remotos ou compactados e COPY realiza o mesmo procedimento, porém, para arquivos locais.
+
+3.    Qual a diferença entre os comandos RUN, CMD e ENTRYPOINT?
+          O comando run ele serve para executar comandos na hora da montagem/construção de uma image, enquanto que o comando cmd é usado para executar comandos somente
+          no container, ou seja, após a image ser carregada. O entrypoint ele assim como cmd só executa comandos no container, mas quando ambos existem no mesmo
+          dockerfile os valores definidos para o cmd são transformados em parâmetros para o entrypoint, logo, no cmd pode ser colocado um default que pode ser
+          executada no entrypoint quando não for especificada já o entrypoint será sempre executado quando o container for iniciado.
+
+4.    Qual a diferença entre as estratégias de shell e exec?
+
+             Um shell é um intermediador entre comandos que vêm do usuário para o sistema operacional, podendo utilizar interface gráfica para facilitar o processo.
+             Dessa forma, qualquer sistema operacional possui shell. Sob esse contexto, o comando utilizado no Docker "SHELL" vem para tornar substituir um shell 
+             padrão e permitir mais funcionalidades para o usuário. Já o "EXEC" permite a execução de comandos dentro de um contêiner/imagem que já está sendo executado
+             sem necessidade de utilizar o SHELL.
+
+5.    Qual a diferença entre os comandos docker stop <container_id> e docker kill <container_id>? 
+        O comando docker stop irá parar o processo em questão <container_id>, mandando um SIGTERM encerrando o processo e depois um SIGKILL, enquanto que o comando
+        docker kill irá excluir o processo direto mandando um SIGKILL. SIGTERM é um sinal que pode ser interpretado e ignorado, já o SIGKILL é um sinal que não pode
+        ser ignorado, excluindo o processo direto.
