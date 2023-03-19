@@ -1,0 +1,102 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.toolbar{
+    position: relative;
+    z-index: 7;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.411);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.toolbar:hover{
+    background-color: #000;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.toolbar a{
+    padding: 0.8rem 1rem;
+    margin-right: 10rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.toolbar a:hover{
+    background-color: #054f77;
+    transition: 0.7s;
+    font-weight: bold;
+    box-shadow: 10px 10px 15px 6px rgba(0,0,0,0.36);;
+}
+
+.background h1{
+    color: #fff;
+    margin-top: 12rem;
+    font-size: 4rem;
+    text-shadow: 6px 1px 10px #000;
+}
+
+.background h3{
+    margin-top: 1rem;
+    animation: grow 2s infinite;
+}
+
+@keyframes grow {
+    0%{
+    border-bottom: 9px solid #F28800;
+    }
+    100%{
+    border-bottom: 2px solid #054f77;
+    }
+}
+
+.background h1, h3{
+    position: relative;
+    z-index: 3;
+    margin-left: 7rem;
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    background-color: #0e0d0d;
+    padding: 2.2rem;
+    background-size: cover;
+}
+
+.background video{
+    position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+    filter: blur(5px);
+}
+
+footer{
+    text-align: center;
+    background-color: #054f77;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer p{
+    padding: 1rem;
+    font-weight: bold;
+}
