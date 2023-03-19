@@ -32,7 +32,7 @@ main{
 .col-1 h2{}
 .col-1 p{}
 .col-1 .div{
-    background-color: #057818;
+    background-color: #054F77;
     width: 100%;
     height: 0.2rem;
 }
@@ -41,10 +41,10 @@ input{
     width: 100%;
     outline: none;
 }
-.col-1 .title{}
-.col-1 #input-title{}
-.col-1 .date-lanc{}
-.col-1 #input-date{}
+.col-1 .name{}
+.col-1 #input-name{}
+.col-1 .local{}
+.col-1 #input-local{}
 .col-1 #register{
     color: #fff;
     display: block;
@@ -52,13 +52,13 @@ input{
     margin-top: 1rem;
     padding: 0.5rem;
     border-radius: 0.4rem;
-    background-color: #057818;
+    background-color: #054F77;
     border: none;
 }
 
 .col-1 #register:hover{
     cursor: pointer;
-    background-color: #407344;
+    background-color: #000875;
     border: solid 1px #fff;
     transform: scale(1.1);
     box-shadow: 2px 7px 15px rgba(0,0,0,0.75);
@@ -85,23 +85,23 @@ input{
 
 .col-2 h2{}
 
-.col-2 .books{
+.col-2 .company{
     width: 20rem;
     margin: auto;
 }
 
-.col-2 .card-book{
+.col-2 .card-company{
     border: 1px solid #fff;
     border-radius: 0.5rem;
     margin-top: 1rem;
 }
 .col-2 .card-book h4{}
-.col-2 .date-release{
+.col-2 .section-local{
     justify-content: center;
-    margin: auto;
+    text-align: center;
     display: flex;
     align-items: center;
     margin-top: -1rem;
 }
-.col-2 .date-release p{}
-.col-2 .date-release .date{}
+.col-2 .section-local p{}
+.col-2 .section-local .date{}
